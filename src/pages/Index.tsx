@@ -108,6 +108,48 @@ const defaultCategories: Category[] = [
         isAnswered: false 
       },
     ]
+  },
+  {
+    id: '3',
+    name: 'Конный спорт и лошади',
+    questions: [
+      { 
+        id: '3-1', 
+        points: 100, 
+        question: 'Как называется "домик" для лошади?', 
+        answer: 'Денник', 
+        isAnswered: false 
+      },
+      { 
+        id: '3-2', 
+        points: 200, 
+        question: 'Какой масти бывают лошади цвета песка с черными гривой и хвостом?', 
+        answer: 'Соловая', 
+        isAnswered: false 
+      },
+      { 
+        id: '3-3', 
+        points: 300, 
+        question: 'Как называется дисциплина конного спорта, где всадник и лошадь выполняют различные элементы высшей школы верховой езды?', 
+        answer: 'Выездка', 
+        isAnswered: false 
+      },
+      { 
+        id: '3-4', 
+        points: 400, 
+        question: 'АУКЦИОН! Кто предложит больше?\n\nВопрос: Что определяется по зубам лошади?', 
+        answer: 'Возраст', 
+        isAnswered: false,
+        specialType: 'auction'
+      },
+      { 
+        id: '3-5', 
+        points: 500, 
+        question: 'Какой аллюр является самым быстрым?', 
+        answer: 'Галоп', 
+        isAnswered: false 
+      },
+    ]
   }
 ];
 
