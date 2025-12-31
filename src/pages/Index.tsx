@@ -20,62 +20,51 @@ interface Question {
   question: string;
   answer: string;
   isAnswered: boolean;
+  specialType?: 'cat-in-bag' | 'auction';
 }
 
 const defaultCategories: Category[] = [
   {
     id: '1',
-    name: 'История',
+    name: 'Ох уж эта школа',
     questions: [
-      { id: '1-1', points: 100, question: 'В каком году основана Москва?', answer: '1147', isAnswered: false },
-      { id: '1-2', points: 200, question: 'Кто был первым императором России?', answer: 'Петр I', isAnswered: false },
-      { id: '1-3', points: 300, question: 'В каком году началась Первая мировая война?', answer: '1914', isAnswered: false },
-      { id: '1-4', points: 400, question: 'Какое событие произошло в 1917 году?', answer: 'Октябрьская революция', isAnswered: false },
-      { id: '1-5', points: 500, question: 'Когда закончилась Вторая мировая война?', answer: '1945', isAnswered: false },
-    ]
-  },
-  {
-    id: '2',
-    name: 'География',
-    questions: [
-      { id: '2-1', points: 100, question: 'Столица Франции?', answer: 'Париж', isAnswered: false },
-      { id: '2-2', points: 200, question: 'Самая длинная река в мире?', answer: 'Амазонка', isAnswered: false },
-      { id: '2-3', points: 300, question: 'На каком континенте находится Египет?', answer: 'Африка', isAnswered: false },
-      { id: '2-4', points: 400, question: 'Самая высокая гора в мире?', answer: 'Эверест', isAnswered: false },
-      { id: '2-5', points: 500, question: 'Сколько океанов на Земле?', answer: '5', isAnswered: false },
-    ]
-  },
-  {
-    id: '3',
-    name: 'Наука',
-    questions: [
-      { id: '3-1', points: 100, question: 'Сколько планет в Солнечной системе?', answer: '8', isAnswered: false },
-      { id: '3-2', points: 200, question: 'Химический символ золота?', answer: 'Au', isAnswered: false },
-      { id: '3-3', points: 300, question: 'Кто открыл закон всемирного тяготения?', answer: 'Ньютон', isAnswered: false },
-      { id: '3-4', points: 400, question: 'Скорость света в вакууме?', answer: '300 000 км/с', isAnswered: false },
-      { id: '3-5', points: 500, question: 'Что такое ДНК?', answer: 'Дезоксирибонуклеиновая кислота', isAnswered: false },
-    ]
-  },
-  {
-    id: '4',
-    name: 'Литература',
-    questions: [
-      { id: '4-1', points: 100, question: 'Автор "Евгения Онегина"?', answer: 'Пушкин', isAnswered: false },
-      { id: '4-2', points: 200, question: 'В каком романе героиня Наташа Ростова?', answer: 'Война и мир', isAnswered: false },
-      { id: '4-3', points: 300, question: 'Кто написал "Мастер и Маргарита"?', answer: 'Булгаков', isAnswered: false },
-      { id: '4-4', points: 400, question: 'Имя главного героя романа "Преступление и наказание"?', answer: 'Родион Раскольников', isAnswered: false },
-      { id: '4-5', points: 500, question: 'Кто автор поэмы "Медный всадник"?', answer: 'Пушкин', isAnswered: false },
-    ]
-  },
-  {
-    id: '5',
-    name: 'Кино',
-    questions: [
-      { id: '5-1', points: 100, question: 'Режиссер фильма "Титаник"?', answer: 'Джеймс Кэмерон', isAnswered: false },
-      { id: '5-2', points: 200, question: 'В каком году вышел первый фильм о Гарри Поттере?', answer: '2001', isAnswered: false },
-      { id: '5-3', points: 300, question: 'Кто сыграл Железного человека?', answer: 'Роберт Дауни-младший', isAnswered: false },
-      { id: '5-4', points: 400, question: 'Сколько фильмов в саге "Звездные войны"?', answer: '9 основных', isAnswered: false },
-      { id: '5-5', points: 500, question: 'Какой фильм получил Оскар в 2020 году?', answer: 'Паразиты', isAnswered: false },
+      { 
+        id: '1-1', 
+        points: 100, 
+        question: 'Какой частью речи является слово "бегать"?', 
+        answer: 'Глагол', 
+        isAnswered: false 
+      },
+      { 
+        id: '1-2', 
+        points: 200, 
+        question: 'Сколько будет 7²?', 
+        answer: '49', 
+        isAnswered: false 
+      },
+      { 
+        id: '1-3', 
+        points: 300, 
+        question: 'Кот в мешке! Вопрос надо отдать другому игроку.\n\nВопрос из темы "Животные": Какое млекопитающее умеет летать?', 
+        answer: 'Летучая мышь', 
+        isAnswered: false,
+        specialType: 'cat-in-bag'
+      },
+      { 
+        id: '1-4', 
+        points: 400, 
+        question: 'Как называется самая большая планета Солнечной системы?', 
+        answer: 'Юпитер', 
+        isAnswered: false 
+      },
+      { 
+        id: '1-5', 
+        points: 500, 
+        question: 'АУКЦИОН! Вопрос уходит тому, кто пообещает больше всего очков. Стартовая цена – ваши текущие очки.\n\nВопрос: Кто автор стихотворения "Бородино"?', 
+        answer: 'Михаил Юрьевич Лермонтов', 
+        isAnswered: false,
+        specialType: 'auction'
+      },
     ]
   }
 ];

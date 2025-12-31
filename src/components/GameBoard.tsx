@@ -11,6 +11,7 @@ interface Question {
   question: string;
   answer: string;
   isAnswered: boolean;
+  specialType?: 'cat-in-bag' | 'auction';
 }
 
 interface Category {
@@ -186,13 +187,23 @@ export default function GameBoard({ categories, setCategories, scores, setScores
                 {category.questions.map(question => (
                   <Card
                     key={question.id}
-                    className={`p-6 text-center cursor-pointer transition-all ${
+                    className={`p-6 text-center cursor-pointer transition-all relative ${
                       question.isAnswered
                         ? 'bg-gray-300 opacity-50 cursor-not-allowed'
+                        : question.specialType === 'cat-in-bag'
+                        ? 'bg-gradient-to-br from-green-500 to-emerald-600 hover:scale-105 text-white animate-pulse'
+                        : question.specialType === 'auction'
+                        ? 'bg-gradient-to-br from-yellow-400 to-orange-500 hover:scale-105 text-white animate-pulse'
                         : 'bg-gradient-to-br from-orange-400 to-pink-500 hover:scale-105 text-white'
                     }`}
                     onClick={() => !question.isAnswered && selectQuestion(category.id, question.id)}
                   >
+                    {question.specialType === 'cat-in-bag' && (
+                      <div className="absolute top-1 right-1 text-2xl">🐱</div>
+                    )}
+                    {question.specialType === 'auction' && (
+                      <div className="absolute top-1 right-1 text-2xl">🔨</div>
+                    )}
                     <p className="text-3xl font-bold">{question.points}</p>
                   </Card>
                 ))}
@@ -210,8 +221,26 @@ export default function GameBoard({ categories, setCategories, scores, setScores
             </DialogTitle>
           </DialogHeader>
           <div className="space-y-6">
-            <Card className="p-8 bg-gradient-to-br from-purple-100 to-pink-100">
-              <p className="text-xl text-center">{selectedQuestion?.question}</p>
+            <Card className={`p-8 ${
+              selectedQuestion?.specialType === 'cat-in-bag'
+                ? 'bg-gradient-to-br from-green-100 to-emerald-100'
+                : selectedQuestion?.specialType === 'auction'
+                ? 'bg-gradient-to-br from-yellow-100 to-orange-100'
+                : 'bg-gradient-to-br from-purple-100 to-pink-100'
+            }`}>
+              {selectedQuestion?.specialType === 'cat-in-bag' && (
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <span className="text-4xl">🐱</span>
+                  <p className="text-2xl font-bold text-green-700">КОТ В МЕШКЕ</p>
+                </div>
+              )}
+              {selectedQuestion?.specialType === 'auction' && (
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <span className="text-4xl">🔨</span>
+                  <p className="text-2xl font-bold text-orange-700">АУКЦИОН</p>
+                </div>
+              )}
+              <p className="text-xl text-center whitespace-pre-line">{selectedQuestion?.question}</p>
             </Card>
 
             {showAnswer && (
