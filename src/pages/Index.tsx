@@ -234,6 +234,131 @@ const defaultCategories: Category[] = [
         specialType: 'cat-in-bag'
       },
     ]
+  },
+  {
+    id: '6',
+    name: 'Животные',
+    questions: [
+      { 
+        id: '6-1', 
+        points: 100, 
+        question: 'Какое животное является символом России?', 
+        answer: 'Медведь', 
+        isAnswered: false 
+      },
+      { 
+        id: '6-2', 
+        points: 200, 
+        question: 'Сколько ног у паука?', 
+        answer: '8', 
+        isAnswered: false 
+      },
+      { 
+        id: '6-3', 
+        points: 300, 
+        question: 'Как называется детёныш коровы?', 
+        answer: 'Телёнок', 
+        isAnswered: false 
+      },
+      { 
+        id: '6-4', 
+        points: 400, 
+        question: 'Какое животное самое большое на планете?', 
+        answer: 'Синий кит', 
+        isAnswered: false 
+      },
+      { 
+        id: '6-5', 
+        points: 500, 
+        question: 'Как называется наука, изучающая животных?', 
+        answer: 'Зоология', 
+        isAnswered: false 
+      },
+    ]
+  },
+  {
+    id: '7',
+    name: 'Мультфильмы',
+    questions: [
+      { 
+        id: '7-1', 
+        points: 100, 
+        question: 'Как зовут снеговика из мультфильма "Холодное сердце"?', 
+        answer: 'Олаф', 
+        isAnswered: false 
+      },
+      { 
+        id: '7-2', 
+        points: 200, 
+        question: 'Кто живёт в ананасе на дне океана?', 
+        answer: 'Губка Боб', 
+        isAnswered: false 
+      },
+      { 
+        id: '7-3', 
+        points: 300, 
+        question: 'Как называется город, где живут Симпсоны?', 
+        answer: 'Спрингфилд', 
+        isAnswered: false 
+      },
+      { 
+        id: '7-4', 
+        points: 400, 
+        question: 'Какой цвет волос у Русалочки Ариэль?', 
+        answer: 'Рыжий (красный)', 
+        isAnswered: false 
+      },
+      { 
+        id: '7-5', 
+        points: 500, 
+        question: 'Кот в мешке! Передай вопрос сопернику.\n\nТема: Спорт. Сколько игроков в футбольной команде на поле?', 
+        answer: '11', 
+        isAnswered: false,
+        specialType: 'cat-in-bag'
+      },
+    ]
+  },
+  {
+    id: '8',
+    name: 'Еда и напитки',
+    questions: [
+      { 
+        id: '8-1', 
+        points: 100, 
+        question: 'Из чего делают попкорн?', 
+        answer: 'Из кукурузы', 
+        isAnswered: false 
+      },
+      { 
+        id: '8-2', 
+        points: 200, 
+        question: 'Какой фрукт называют "королём фруктов"?', 
+        answer: 'Дуриан', 
+        isAnswered: false 
+      },
+      { 
+        id: '8-3', 
+        points: 300, 
+        question: 'АУКЦИОН! Торгуйтесь за вопрос!\n\nВопрос: Какая страна является родиной пиццы?', 
+        answer: 'Италия', 
+        isAnswered: false,
+        specialType: 'auction'
+      },
+      { 
+        id: '8-4', 
+        points: 400, 
+        question: 'Какой овощ называют "вторым хлебом"?', 
+        answer: 'Картофель', 
+        isAnswered: false 
+      },
+      { 
+        id: '8-5', 
+        points: 500, 
+        question: 'Из какого растения делают шоколад?', 
+        answer: 'Какао', 
+        isAnswered: false 
+      },
+    ]
   }
 ];
 
