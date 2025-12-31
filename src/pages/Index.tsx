@@ -192,6 +192,48 @@ const defaultCategories: Category[] = [
         specialType: 'cat-in-bag'
       },
     ]
+  },
+  {
+    id: '5',
+    name: 'На 5+',
+    questions: [
+      { 
+        id: '5-1', 
+        points: 200, 
+        question: 'Сколько падежей в русском языке?', 
+        answer: '6', 
+        isAnswered: false 
+      },
+      { 
+        id: '5-2', 
+        points: 400, 
+        question: 'Как называется треугольник, у которого все стороны равны?', 
+        answer: 'Равносторонний', 
+        isAnswered: false 
+      },
+      { 
+        id: '5-3', 
+        points: 600, 
+        question: 'Какой газ поглощают растения в процессе фотосинтеза?', 
+        answer: 'Углекислый газ, CO2', 
+        isAnswered: false 
+      },
+      { 
+        id: '5-4', 
+        points: 800, 
+        question: 'Что такое "сказуемое"?', 
+        answer: 'Главный член предложения, обозначающий действие предмета', 
+        isAnswered: false 
+      },
+      { 
+        id: '5-5', 
+        points: 1000, 
+        question: 'Кот в мешке! Вопрос уходит сопернику.\n\nТема: Корейский язык. Как будет "спасибо" по-корейски?', 
+        answer: 'Кампсахамнида', 
+        isAnswered: false,
+        specialType: 'cat-in-bag'
+      },
+    ]
   }
 ];
 
