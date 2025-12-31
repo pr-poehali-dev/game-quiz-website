@@ -66,6 +66,48 @@ const defaultCategories: Category[] = [
         specialType: 'auction'
       },
     ]
+  },
+  {
+    id: '2',
+    name: 'ENHYPEN',
+    questions: [
+      { 
+        id: '2-1', 
+        points: 100, 
+        question: 'Как называется фандом ENHYPEN?', 
+        answer: 'ENGENE', 
+        isAnswered: false 
+      },
+      { 
+        id: '2-2', 
+        points: 200, 
+        question: 'Какой дебютный сингл-альбом группы вышел в 2020 году?', 
+        answer: 'BORDER : DAY ONE', 
+        isAnswered: false 
+      },
+      { 
+        id: '2-3', 
+        points: 300, 
+        question: 'Назовите двух участников группы, которые являются австралийцем и японцем.', 
+        answer: 'Джейк и НиКи', 
+        isAnswered: false 
+      },
+      { 
+        id: '2-4', 
+        points: 400, 
+        question: 'Кот в мешке! Вопрос надо отдать другому участнику.\n\nВопрос из темы "Школьная программа": Что измеряют в амперах?', 
+        answer: 'Силу электрического тока', 
+        isAnswered: false,
+        specialType: 'cat-in-bag'
+      },
+      { 
+        id: '2-5', 
+        points: 500, 
+        question: 'В каком популярном шоу на выживание образовалась группа ENHYPEN?', 
+        answer: 'I-LAND', 
+        isAnswered: false 
+      },
+    ]
   }
 ];
 
