@@ -150,6 +150,48 @@ const defaultCategories: Category[] = [
         isAnswered: false 
       },
     ]
+  },
+  {
+    id: '4',
+    name: 'Новый год',
+    questions: [
+      { 
+        id: '4-1', 
+        points: 200, 
+        question: 'В какой стране Новый год встречают, осыпая друг друга лепестками роз?', 
+        answer: 'Бразилия', 
+        isAnswered: false 
+      },
+      { 
+        id: '4-2', 
+        points: 400, 
+        question: 'Кто, согласно советской традиции, является внучкой Деда Мороза?', 
+        answer: 'Снегурочка', 
+        isAnswered: false 
+      },
+      { 
+        id: '4-3', 
+        points: 600, 
+        question: 'Как называется старый Новый год по-научному?', 
+        answer: 'Новогодье по юлианскому календарю', 
+        isAnswered: false 
+      },
+      { 
+        id: '4-4', 
+        points: 800, 
+        question: 'В каком городе России официально "прописаны" Дед Мороз и Снегурочка?', 
+        answer: 'Великий Устюг и Кострома соответственно', 
+        isAnswered: false 
+      },
+      { 
+        id: '4-5', 
+        points: 1000, 
+        question: 'Кот в мешке! Вопрос надо отдать сопернику.\n\nВопрос из темы "ENHYPEN": Как зовут самого старшего участника группы?', 
+        answer: 'Хисын', 
+        isAnswered: false,
+        specialType: 'cat-in-bag'
+      },
+    ]
   }
 ];
 
